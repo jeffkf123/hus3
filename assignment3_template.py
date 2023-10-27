@@ -16,7 +16,7 @@ plt.imshow(board[plotstart:plotend,plotstart:plotend])
 plt.figure(figsize=(20,20))
 plt.imshow(board)
 
-#tf.config.set_visible_devices([], 'GPU')
+tf.config.set_visible_devices([], 'GPU')
 tf.debugging.set_log_device_placement(True)
 
 boardtf = tf.cast(board, dtype=tf.float16)
