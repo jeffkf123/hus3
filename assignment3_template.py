@@ -1,9 +1,8 @@
-
 import matplotlib.pyplot as plt
 import numpy as np
-import lifereader
 import tensorflow as tf
 import math
+import lifereader
 import timeit
 
 board = lifereader.readlife('BREEDER3.LIF', 2048)
@@ -19,7 +18,7 @@ plt.imshow(board)
 #tf.config.set_visible_devices([], 'GPU')
 tf.debugging.set_log_device_placement(True)
 
-boardtf = tf.cast(board, dtype=tf.float16)
+boardtf = tf.cast(board, dtype=tf.bfloat16)
 
 @tf.function
 def runlife(board, iters):
